@@ -1,5 +1,6 @@
 package service;
 
+import entity.Todolist;
 import repository.TodolistRepository;
 import service.TodolistService;
 
@@ -12,14 +13,13 @@ public class TodolistServiceImpl implements TodolistService {
 
   public void showTodoList() {
     Todolist[] model = todolistRepository.getAll();
-
     System.out.println("TODOLIST");
     for (var i = 0; i < model.length; i++) {
       var todo = model[i];
       var no = i + 1;
 
       if (todo != null) {
-        System.out.println(no + ". " + todo);
+        System.out.println(no + ". " + todo.getTodo());
       }
     }
 

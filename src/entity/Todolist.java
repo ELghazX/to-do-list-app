@@ -13,12 +13,12 @@ public class Todolist {
   }
 
   // setter
-  String setTodo(String todo) {
+  public String setTodo(String todo) {
     return this.todo = todo;
   }
 
   // getter?
-  String getTodo() {
+  public String getTodo() {
     return this.todo;
   }
 
